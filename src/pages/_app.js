@@ -1,5 +1,15 @@
 import '@/styles/globals.css'
+import { MantineProvider } from '@mantine/core'
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({Component, pageProps}) {
+  return (
+    <MantineProvider
+    withGlobalStyles
+    withNormalizeCSS
+    theme={{colorScheme:light}}
+    
+    >
+      <Components {...pageProps}  />
+    </MantineProvider>
+  )
 }
